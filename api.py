@@ -86,7 +86,6 @@ class Pets:
         headers = {'Authorization': f'Bearer {token[0]}'}
         res = requests.delete(self.base_url + f'pet/{id_pet}', headers=headers)
         status = res.status_code
-        print(status)
         return status
 
     def delete_user_by_id(self, token) -> json:
